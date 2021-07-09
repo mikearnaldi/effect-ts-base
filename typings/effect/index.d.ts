@@ -11,3 +11,11 @@ declare module "@effect-ts/system/Effect/effect" {
     runMain<EX, AX>(this: T.Effect<T.DefaultEnv, EX, AX>): void;
   }
 }
+
+declare global {
+  namespace jest {
+    interface Matchers<R, T> {
+      equals(b: unknown): void;
+    }
+  }
+}

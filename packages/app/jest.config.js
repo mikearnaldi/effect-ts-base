@@ -8,6 +8,7 @@ module.exports = {
   coverageDirectory: "coverage",
   collectCoverageFrom: ["./src/**/*.ts"],
   modulePathIgnorePatterns: ["<rootDir>/lib"],
+  setupFilesAfterEnv: ["<rootDir>/../../scripts/jest-after-env.ts"],
   verbose: true,
   globals: {
     "ts-jest": {

@@ -10,4 +10,5 @@ it("logs", async () => {
     .runPromise();
 
   expect(f).toHaveBeenCalledWith("Hello World");
+  expect(1).equals(1);
 });
