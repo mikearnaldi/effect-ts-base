@@ -1,6 +1,7 @@
 {
   "name": "app",
   "scripts": {
+    "test": "yarn g:jest",
     "clean": "yarn g:rimraf lib .tsbuildinfo",
     "dev": "yarn build-tsc -w",
     "build-tsc": "yarn g:tsc -b tsconfig.build.json",
@@ -9,7 +10,7 @@
   },
   "exports": {
     "./*": {
-      "default": "./lib/*"
+      "default": "./lib/*.js"
     }
   }
 }

@@ -2,7 +2,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "test": "jest",
     "g:tsc": "cd $INIT_CWD && tsc",
+    "g:jest": "cd $INIT_CWD && jest",
     "g:rimraf": "cd $INIT_CWD && rimraf",
     "postinstall": "ts-patch install && ts-patch --persist"
   },

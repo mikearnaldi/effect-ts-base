@@ -1,4 +1,5 @@
 import type * as T from "@effect-ts/core/Effect";
+import {} from "@effect-ts/fluent";
 
 declare module "@effect-ts/system/Effect/effect" {
   export interface Base<R, E, A> extends Effect<R, E, A> {}
