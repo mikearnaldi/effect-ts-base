@@ -1,0 +1,57 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Clean App",
+      "type": "shell",
+      "command": "sh -c \"cd packages/app; yarn clean\"",
+      "group": "build",
+      "problemMatcher": ["$tsc"]
+    },
+    {
+      "label": "Watch App SRC",
+      "type": "shell",
+      "command": "sh -c \"cd packages/app; yarn build-src --watch\"",
+      "group": "build",
+      "isBackground": true,
+      "problemMatcher": ["$tsc-watch"]
+    },
+    {
+      "label": "Watch App Pages",
+      "type": "shell",
+      "command": "sh -c \"cd packages/app; yarn build-pages --watch\"",
+      "group": "build",
+      "isBackground": true,
+      "problemMatcher": ["$tsc-watch"]
+    },
+    {
+      "label": "Watch",
+      "type": "shell",
+      "command": "sh -c \"cd packages/app; yarn dev-next\"",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOrder": "sequence",
+      "dependsOn": ["Clean App", "Watch App SRC", "Watch App Pages"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "sh -c \"cd packages/app; yarn build-next\"",
+      "group": "build",
+      "dependsOrder": "sequence",
+      "dependsOn": ["Clean App", "Build App SRC", "Build App Pages"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Start",
+      "type": "shell",
+      "command": "sh -c \"cd packages/app; yarn start\"",
+      "group": "build",
+      "problemMatcher": [],
+      "isBackground": true
+    }
+  ]
+}

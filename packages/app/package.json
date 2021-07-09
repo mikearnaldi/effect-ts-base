@@ -1,0 +1,15 @@
+{
+  "name": "app",
+  "scripts": {
+    "clean": "yarn g:rimraf lib .tsbuildinfo",
+    "dev": "yarn build-tsc -w",
+    "build-tsc": "yarn g:tsc -b tsconfig.build.json",
+    "build": "yarn clean && yarn build-tsc",
+    "start": "yarn g:next start"
+  },
+  "exports": {
+    "./*": {
+      "default": "./lib/*"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["./src/**/*.ts", "./test/**/*.ts"],
+  "compilerOptions": {
+    "outDir": "lib",
+    "plugins": [
+      { "transform": "@effect-ts/tracing-plugin" },
+      { "transform": "typescript-transform-paths" }
+    ],
+    "declaration": false,
+    "sourceMap": false,
+    "declarationMap": false,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "target": "ES2018",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "incremental": true,
+    "tsBuildInfoFile": ".tsbuildinfo/jest"
+  }
+}

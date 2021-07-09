@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["./src/**/*.ts", "./test/**/*.ts"],
+  "compilerOptions": {
+    "outDir": "lib",
+    "declaration": false,
+    "sourceMap": false,
+    "declarationMap": false,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "target": "ES2018",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "incremental": true,
+    "tsBuildInfoFile": ".tsbuildinfo/main"
+  }
+}
