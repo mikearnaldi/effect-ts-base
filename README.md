@@ -1,1 +1,1 @@
-# yarn-3-effect-next
+# base project for effect-ts
